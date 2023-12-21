@@ -3,9 +3,9 @@ import string
 
 #######################  SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI  ###############################
 ##
-# Česká abeceda
+# Slabiky
 #nedával jsme ->ú<- protože kdyby, protože by se mohlo vyskytovat i tam kde nechci to samé platí i o ->ů<-
-ceska_abeceda = ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov', 'ro', 'en', 'na', 'je', 'pr', 'te', 'le', 'ko', 'ne', 'od', 'ra', 'to', 'ou', 'no', 'la', 'li', 'ho', 'pro', 'ost', 'sta', 'pře', 'ter', 'ení', 'ova', 'pod', 'kte', 'pra', 'ého', 'sti', 'řed', 'kon', 'nos', 'ick', 'ová', 'při', 'sou', 'ist', 'edn']
+slabiky = ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov', 'ro', 'en', 'na', 'je', 'pr', 'te', 'le', 'ko', 'ne', 'od', 'ra', 'to', 'ou', 'no', 'la', 'li', 'ho', 'pro', 'ost', 'sta', 'pře', 'ter', 'ení', 'ova', 'pod', 'kte', 'pra', 'ého', 'sti', 'řed', 'kon', 'nos', 'ick', 'ová', 'při', 'sou', 'ist', 'edn']
 # Pravděpodobnosti pro každé písmeno abecedy
 pravdepodobnosti_pismen = [66,21,78,11,45,31,17,9,82,1,31,66, 21, 16, 16, 10, 36, 1, 78, 11, 14, 4, 3, 12, 10, 45, 31, 19, 37, 40, 32, 66, 1, 82, 1, 34, 1, 39, 11, 46, 8, 55, 1, 31, 1, 6, 43, 1, 1, 17, 9, 21, 10]
 
@@ -78,16 +78,16 @@ while True:
             delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
             """
             if pocet_slov_1odstavec==1  and pocet_slov_1vete !=1:  #velké slovo na odstavce kromě PRVNÍHO   
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova)).upper()
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova)).upper()
                 lorem_text += slovo + ' '
                 
 
             if pocet_slov_1vete==1:  #velké slovo na začátku věty     
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova)).upper()
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova)).upper()
                 lorem_text += slovo + ' '
 
             else:
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova))
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
                 lorem_text += slovo + ' '
             """
 
@@ -95,17 +95,17 @@ while True:
 
             """
             if pocet_slov_1odstavec==1  and pocet_slov_1vete !=1:  #velké písmeno na odstavce kromě PRVNÍHO   
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova))
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
                 nove_slovo= ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())])
                 lorem_text += nove_slovo + ' '
             """    
             if pocet_slov_1vete==1:  #velké písmeno na začátku věty     
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova))
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
                 nove_slovo= ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())])
                 lorem_text += nove_slovo + ' '
 
             else:
-                slovo = ''.join(random.choices(ceska_abeceda, weights=pravdepodobnosti_pismen, k=delka_slova))
+                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
                 lorem_text += slovo + ' '
                 
                 if carka_ve_vete % misto_carky == 0 and pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
