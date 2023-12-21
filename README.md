@@ -88,9 +88,6 @@ Lorem ibsum generátor
                             (ověřování pomocí instrukce try: except  ValueError:)
 
                                 Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
-
-
-
 řádky v kódu 47-51              while True:
                                 # Maximální počet slov, který si může uživatel zvolit
                                 zadane_max_pocet_slov = input("Zadej maximální počet slov: ")
@@ -121,15 +118,13 @@ Lorem ibsum generátor
                             (ověření pomocí podminky if)
 
                             VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
-
 řádky v kódu 169-171            while True:
                                     rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
                                     if "ano" in rozhodnuti:
                                         .
                                         .
                                         .
-                                        .                          
-                                        
+                                        .                                                               
 řádky v kódu 185-188                elif "ne" in rozhodnuti:
                                         break
                                     else:
@@ -182,7 +177,7 @@ tak se tyto 4 proměnná busou vždy zvětšovat o +1
 
                                     ' '.join(...): Nakonec se používá metoda join(), aby se spojila upravená slova zpět do řetězce, kde jsou oddělena mezerami. Výsledek je přiřazen do proměnné novy_text
 
-
+                    jakmile 
 
 
 
