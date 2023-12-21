@@ -31,10 +31,33 @@ Lorem ibsum generátor
                 1, 39, 11, 46, 8, 55, 1, 31, 1, 6, 
                 43, 1, 1, 17, 9, 21, 10]
 
-                B)Počet slabik VE VĚTĚ – zde jsem si zvolil, že v každém slově se bude
-                 vyskytovat 1 nebo až 4 slabiky (řádky v kódu: 15,16), kdy nejvíce se vyskytují slova 
-                 se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou
-                 (pravděpodobnosti řádky v kódu: 19–25)
+                B)Počet slabik VE SLOVĚ 
+                Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky (řádky v kódu: 15,16), kdy nejvíce se vyskytují slova 
+                se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou
+                (pravděpodobnosti řádky v kódu: 19–25)
+
+                    # Minimální a maximální délka slova
+                    min_delka_slova = 1
+                    max_delka_slova = 4
+
+                    # Pravděpodobnosti pro délky slov od 1 do 10
+                    pravdepodobnosti_delky_slov = [
+                        5,  # délka slova 1
+                        10,  # délka slova 2
+                        15,  # délka slova 3
+                        8,  # délka slova 4
+
+                    ]
+
+                C)Počet slov VE VETĚ
+                Zde jsem si zvolil, že v každé větě se budu vyskytovat 5, 10, 14, 16, 20 slov (řádky v kódu: 31,32), kdy nejvíce se vyskytují věty 
+                s 16 slovy, dále pak se 14 slovy, poté 20 slovy, následně s 10 slovy  nejméně s 5 slovy
+
+                slova_ve_vete=[5,10,14,16,20]
+                pravdepodobnosti_veta=[2,5,9,12,8]
+
+                D)Počet slov NA ODSTAVCI
+
 
 
 
