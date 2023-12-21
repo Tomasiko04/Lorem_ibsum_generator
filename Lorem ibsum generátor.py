@@ -1,7 +1,7 @@
 import random
 import string
 
-#######################  SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI  ###############################
+#######################  SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY  ###############################
 ##
 # Slabiky
 #nedával jsme ->ú<- protože kdyby, protože by se mohlo vyskytovat i tam kde nechci to samé platí i o ->ů<-
@@ -10,7 +10,7 @@ slabiky = ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', '
 pravdepodobnosti_pismen = [66,21,78,11,45,31,17,9,82,1,31,66, 21, 16, 16, 10, 36, 1, 78, 11, 14, 4, 3, 12, 10, 45, 31, 19, 37, 40, 32, 66, 1, 82, 1, 34, 1, 39, 11, 46, 8, 55, 1, 31, 1, 6, 43, 1, 1, 17, 9, 21, 10]
 
 
-##POCET SLABIK
+##Počet slabik VE VĚTĚ
 # Minimální a maximální délka slova
 min_delka_slova = 1
 max_delka_slova = 4
@@ -21,7 +21,7 @@ pravdepodobnosti_delky_slov = [
     10,  # délka slova 2
     15,  # délka slova 3
     8,  # délka slova 4
-   
+
 ]
 
 
