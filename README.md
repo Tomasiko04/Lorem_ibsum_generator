@@ -81,14 +81,15 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 2. část programu PROGRAM
 
-    1. Kontrola vstupní hodnoty:
+    1.Kontrola vstupní hodnoty:
         
     Kontrolu vstupních hodnot má zde dvakrát:
     
     1.1 maximální počet slov 
-                (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
-                (ověřování pomocí instrukce try: except  ValueError:)
-                Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
+
+        (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
+        (ověřování pomocí instrukce try: except  ValueError:)
+        Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
 
                 řádky v kódu 47-51              
                                 
