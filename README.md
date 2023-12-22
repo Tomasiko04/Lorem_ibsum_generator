@@ -194,10 +194,10 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                         
 
 
---------------------------------------------------------------------
 
 
-    4. Velké písmeno na začátku věty 
+
+    4.Velké písmeno na začátku věty 
 
     Tato část programu zjišťuje jestli se jedná o první slovo ve větě, a pokud ANO přiřadí proměnné 'slovo' slabiky s danou váhou jejich výskytu a také využije proměnné delka_slova (nastavená výše), abychom měli daný počet slabik ve slově, zde jsem již nepoužil [0] jelikož nevybírám jednu věc o nějaké váze výskytu ze seznamu, ale více věcí (slabik) a následně využije instrukce která je popsána níže s názvem VELK0 PÍSMENO a tím vytvoří velké písmeno na začátku věty, nakonec jen za nově vytvořené slovo z několika slabik přïdá mezeru
 
@@ -223,7 +223,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 
 
-    5. Malé písmeno ve větě
+    5.Malé písmeno ve větě
 
     Pokud se naopak nejedná o první slovo ve větě, program udělá uplně to samé jako by se jednalo o velké písmeno akorát část výše uvedeného kódu VELKÁ PÍSMENA
     Nakonec použiji metodu 'rstrip()', která odstraní všechny koncové znaky (znaky na konci řetězce), mezera je výchozí koncový znak k odstranění a přidá tečku na konci věty (použil jsme to z toho důvodu, aby mezi posledním slovem a tečkou na konci věty nebyla mezera). Potom jen proměnné, které mi určují čárku ve větě nasataví na nulu a nastaví proměnnou, která mi určí, kde se bude vyskytovat přístí čárka v souvětí.
