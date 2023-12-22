@@ -166,7 +166,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                     misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]   
 
     např. za proměnnou misto_carky mi dosadí prvek ze seznamu, kde každý prvek má určitou váhu výsledku,
-    kterou si nastavíme u proměnné weights= ,jelikož k=1 tj. počet vybraných prvků ze seznamu, musíme
+    kterou si nastavíme u proměnné weights= (váhy se nachází v seznamu vah uvedených výš zde je pouze proměnná)
+    ,jelikož k=1, tj. počet vybraných prvků ze seznamu(zde pouze jeden), musíme
     na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde
     nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
 
