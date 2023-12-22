@@ -12,7 +12,6 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
             pravděpodobnosti a počty slabik ve slově, slov ve větách a vět v odstavci:
 
     A)
-
     SLABIK – zde jsme čerpal ze stránky 
                 
                 -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
