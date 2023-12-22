@@ -211,6 +211,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     
     
     VELKÉ PÍSMENO mi určuje  část kódu
+                 
                  ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())])
     
                     kde 'slovo.split()' rozdělí vstupní text na seznam slov;
