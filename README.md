@@ -119,18 +119,23 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                             print(f"Zadali jste řetězec: {max_pocet_slov}")    
 
             1.2. zadávání ANO/NE při ukládání vygenrovyného textu
-                Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku, tedy se uživatele zeptá "Zadej maximální počet slov: "
+                Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
+                "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
+                tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku,
+                tedy se uživatele zeptá "Zadej maximální počet slov: "
                 (ověření pomocí podminky if)
-
-                            VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
-řádky v kódu 169-171            while True:
+                VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
+                    
+                    řádky v kódu 169-171            
+                                while True:
                                     rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
                                     if "ano" in rozhodnuti:
                                         .
                                         .
                                         .
                                         .                                                               
-řádky v kódu 185-188                elif "ne" in rozhodnuti:
+                    řádky v kódu 185-188.               
+                                    elif "ne" in rozhodnuti:
                                         break
                                     else:
                                         print("Zadali jste špatnou odpověď. Muíte dát ANO/NE.")
