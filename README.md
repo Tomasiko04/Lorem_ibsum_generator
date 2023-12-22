@@ -60,9 +60,10 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 slova_ve_vete=[5,10,14,16,20]
                 pravdepodobnosti_veta=[2,5,9,12,8]
 
-                D)Počet slov NA ODSTAVCI
-                Zde jsem si zvolil, že v každé odstavci se budu vyskytovat 50, 60, 70 slov (řádky v kódu: 37,38), kdy nejvíce se vyskytují odstavce 
-                s 60 slovy, dále pak s 50 slovy a nejméně se 70 slovy.
+    D)
+    Počet slov NA ODSTAVCI
+    Zde jsem si zvolil, že v každé odstavci se budu vyskytovat 50, 60, 70 slov (řádky v kódu: 37,38), kdy nejvíce se vyskytují odstavce 
+    s 60 slovy, dále pak s 50 slovy a nejméně se 70 slovy.
 
                 slova_na_odstavci=[50,60,70]
                 pravdepodobnosti_odstavci=[9,12,8]
@@ -189,7 +190,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
     U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného seznamu použiji rozsah od do, kde u maximální hodnoty jsem přidal +1, aby se max hodnota také zaznamenala(pokud by zde nebyla +1 tak se max hodnota nezaznemená např. maximální hodnota bude 250, ale range bude do 249)                  
                     
-                    delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
+        delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
                         
 
 
