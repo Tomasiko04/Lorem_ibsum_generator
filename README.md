@@ -234,17 +234,17 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     
     Nakonec použiji metodu 'rstrip()', která odstraní všechny koncové znaky (znaky na konci řetězce), mezera je výchozí koncový znak k odstranění a přidá tečku na konci věty (použil jsme to z toho důvodu, aby mezi posledním slovem a tečkou na konci věty nebyla mezera). Potom jen proměnné, které mi určují čárku ve větě nasataví na nulu a nastaví proměnnou, která mi určí, kde se bude vyskytovat přístí čárka v souvětí.
 
-                else:
-                    slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
-                    lorem_text += slovo + ' '
-                    
-                    if carka_ve_vete % misto_carky == 0 and pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
-                        
-                        
-                        lorem_text =lorem_text.rstrip() + ', '
-                        carka_ve_vete=0
-                        misto_carky=0
-                        misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
+        else:
+            slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
+            lorem_text += slovo + ' '
+            
+            if carka_ve_vete % misto_carky == 0 and pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
+                
+                
+                lorem_text =lorem_text.rstrip() + ', '
+                carka_ve_vete=0
+                misto_carky=0
+                misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
 
     6.Počet slov v 1 větě
 
@@ -255,17 +255,15 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     Musí zde platit, aby se počet slov počet slov v aktualní větě rovnal nastavenému počtu slov v aktuální větě a zároveň aby clekový počet slov npřesáhl maximum požadovaných slov.
 
     POKUD bych odstranil ''and pocet_slov_1odstavec != delka_na_odstavci'' tak by se mi tečka za větou na konci nějakého odstavce mohla vygenerovat 2x
-
-
-    
-                if pocet_slov_1vete == delka_vety and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec != delka_na_odstavci:
-                            lorem_text = lorem_text.rstrip() + '. ' 
-                                                        
-                            delka_vety=0                    #[5,10,14,16,20]           
-                            pocet_slov_1vete=0
-                            
-                            delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                  
-                      
+ 
+        if pocet_slov_1vete == delka_vety and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec != delka_na_odstavci:
+                    lorem_text = lorem_text.rstrip() + '. ' 
+                                                
+                    delka_vety=0                    #[5,10,14,16,20]           
+                    pocet_slov_1vete=0
+                    
+                    delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                  
+                
                       
                       
                       
