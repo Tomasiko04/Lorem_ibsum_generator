@@ -116,8 +116,8 @@ while True:
                     misto_carky=0
                     misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
 
-            # Přidá tečku každých 5,10,14,16,20 slov (jestliže je pocet_slov_1vete děliteny beze zbytku) a přidání mezery na začátku nové věty
-                #POKUD bych odstranil ''and pocet_slov_1odstavec % 50 != 0'' tak by se mi tečka za větou na konci nějakého odstavce vygenerovat 2x
+            # Přidá tečku za každými 5,10,14,16,20 slovy (jestliže je pocet_slov_1vete(aktualní počet slov ve větě) roven delka_vety (aktuálnímu nastavenému počtu slov ve větě) + celkovy pocet slov nesmí přesáhnout maximální počet slov) a přidání mezery na začátku nové věty
+                #POKUD bych odstranil ''and pocet_slov_1odstavec != delka_na_odstavci'' tak by se mi tečka za větou na konci nějakého odstavce vygenerovat 2x
 
             if pocet_slov_1vete == delka_vety and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec != delka_na_odstavci:
                 lorem_text = lorem_text.rstrip() + '. ' #+ slovo.upper() + ' '

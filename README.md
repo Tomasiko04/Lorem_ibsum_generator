@@ -226,9 +226,12 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 
 
-    5.Malé písmeno ve větě
+    5.Malé písmeno a čárka ve větě
 
-    Pokud se naopak nejedná o první slovo ve větě, program udělá uplně to samé jako by se jednalo o velké písmeno akorát část výše uvedeného kódu VELKÁ PÍSMENA
+    Pokud se naopak nejedná o první slovo ve větě, program udělá úplně to samé jako by se jednalo o velké písmeno akorát část výše uvedeného kódu VELKÁ PÍSMENA.
+    
+    Čárka ve větě nastane v případech pokud: aktualni počet slov ve větě nebude dělitelný beze zbytku počtem slov pro danou větu; nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným počtem slov na 1 odstavec a zároveň kdy aktualni pocet čárek, je dělitelné beze zbytku nastaveným místem, kde má být des. čárka. 
+    
     Nakonec použiji metodu 'rstrip()', která odstraní všechny koncové znaky (znaky na konci řetězce), mezera je výchozí koncový znak k odstranění a přidá tečku na konci věty (použil jsme to z toho důvodu, aby mezi posledním slovem a tečkou na konci věty nebyla mezera). Potom jen proměnné, které mi určují čárku ve větě nasataví na nulu a nastaví proměnnou, která mi určí, kde se bude vyskytovat přístí čárka v souvětí.
 
                 else:
@@ -242,11 +245,25 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                         carka_ve_vete=0
                         misto_carky=0
                         misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
+
+    6.Počet slov v 1 větě
+    Přidá tečku za každými 5,10,14,16,20 slovy (jestliže je pocet_slov_1vete(aktualní počet slov ve větě) roven delka_vety(aktuálnímu nastavenému počtu slov ve větě) + celkovy pocet slov nesmí přesáhnout maximální počet slov) a přidá mezery na začátku nové věty
+    
+    POKUD bych odstranil ''and pocet_slov_1odstavec != delka_na_odstavci'' tak by se mi tečka za větou na konci nějakého odstavce mohla vygenerovat 2x
+
+
+    
+                if pocet_slov_1vete == delka_vety and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec != delka_na_odstavci:
+                            lorem_text = lorem_text.rstrip() + '. ' 
+                                                        
+                            delka_vety=0                    #[5,10,14,16,20]           
+                            pocet_slov_1vete=0
+                            
+                            delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                 
                       
                       
                       
                       
                       
                       
-                      
-Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
+
