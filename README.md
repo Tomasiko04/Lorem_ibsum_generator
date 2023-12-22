@@ -80,9 +80,10 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 V části PROGRAM jsem část s čárkami v souvětí ošetřil tak, že se čárka nevyskytne před tečkou na konci věty či před 1. slovem ve větě.
 
 2. část programu PROGRAM
-
+--
     1. Kontrola vstupní hodnoty:
         Kontrolu vstupních hodnot má zde dvakrát:
+--
             1.1. maximální počet slov 
                 (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
                 (ověřování pomocí instrukce try: except  ValueError:)
