@@ -259,7 +259,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                             delka_vety=0                    #[5,10,14,16,20]           
                             pocet_slov_1vete=0
                             
-                            delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                 
+                            delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                  
                       
                       
                       
