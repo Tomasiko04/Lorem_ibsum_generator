@@ -14,12 +14,12 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
     A)
     SLABIKY – zde jsme čerpal ze stránky 
                 
-                -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
-                kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
-                vybral jsem si odsud tedy pár českých slabik, které se
-                v českém jazyce vyskytují a přiřadil jsme jim dané pravděpodobosti 
-                UKÁZKA: 
-                
+    -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
+    kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
+    vybral jsem si odsud tedy pár českých slabik, které se
+    v českém jazyce vyskytují a přiřadil jsme jim dané pravděpodobosti 
+        
+        UKÁZKA:     
         (Řádky v kódu: 8, 10)       
         SLABIKY
         ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov',
