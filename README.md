@@ -1,25 +1,27 @@
-Lorem ibsum generátor
+Lorem ipsum generátor
     
     Co to vlastně je?
-        Lorem ipsumje označen proužívaný v grafickém designu a navrhování jako demonstrativní 
-        výplňový text při vytváření pracovních ukázek grafických návrhů (např. fontů nebo 
+        Lorem ipsum je označení pro text proužívaný v grafickém designu a navrhování jako demonstrativní 
+        výplňový text, při vytváření pracovních ukázek grafických návrhů (např. fontů nebo 
         rozvržení časopisů či HTML stránek). 
  
-Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
+Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
         
 1. část programu (SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY)
             Tato část, jak již název napovídá, obsahuje veškerá se seznamy, 
             pravděpodobnosti a počty slabik ve slově, slov ve větách a vět v odstavci:
 
     A)
+
     SLABIK – zde jsme čerpal ze stránky 
+                
                 -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
                 kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
                 vybral jsem si odsud tedy pár českých slabik, které se
                 v českém jazyce vyskytují a přiřadil jsme jim dané pravděpodobosti 
                 UKÁZKA: 
-                (V kódu řádky: 8, 10)
-               
+                
+        (Řádky v kódu: 8, 10)       
         SLABIKY
         ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov',
             'ro', 'en', 'na', 'je', 'pr', 'te', 'le', 'ko', 'ne', 'od', 'ra', 
@@ -33,16 +35,16 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
         43, 1, 1, 17, 9, 21, 10]
 
     B)
-    Počet slabik VE SLOVĚ 
-                Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky 
-                (řádky v kódu: 15,16), kdy nejvíce se vyskytují slova 
-                se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
-                (pravděpodobnosti řádky v kódu: 19–25)
 
+    Počet slabik VE SLOVĚ 
+                Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky, kdy nejvíce se vyskytují slova se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
+            
+        (řádky v kódu: 15,16)
         # Minimální a maximální délka slova
         min_delka_slova = 1
         max_delka_slova = 4
 
+        (pravděpodobnosti řádky v kódu: 19–25)
         # Pravděpodobnosti pro délky slov od 1 do 10
         pravdepodobnosti_delky_slov = [
             5,  # délka slova 1
@@ -344,7 +346,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 ZHODNOCENÍ:
 
-Na závěr bych se chtěl svámi podělit o mé pocity. Musím upřímně říct, že se jednalo, aspoň z mého pohledu, již o složitější program a další výzvu, jelikož jsem do zadání úkolu s Lorem ibsum generátorem nikdy nesetkal, a proto jsme vůbec netušil jak začít. Jelikož nestačilo mít pouze znalosti ze školy, ze kterých jsem přestože v mnoha bodech vycházel, musel jsem si své obzory v programování zase o něco málo rozšířit. Kdybych měl přistoupit k sebekritice, tak je to určitě složitost kódu, jelikož vím, že by to zase určitě šlo nějak jednodušeji. 
+Na závěr bych se chtěl svámi podělit o mé pocity. Musím upřímně říct, že se jednalo, aspoň z mého pohledu, již o složitější program a další výzvu, jelikož jsem do zadání úkolu s Lorem ipsum generátorem nikdy nesetkal, a proto jsme vůbec netušil jak začít. Jelikož nestačilo mít pouze znalosti ze školy, ze kterých jsem přestože v mnoha bodech vycházel, musel jsem si své obzory v programování zase o něco málo rozšířit. Kdybych měl přistoupit k sebekritice, tak je to určitě složitost kódu, jelikož vím, že by to zase určitě šlo nějak jednodušeji. 
 
 
 HLAVNÍ NOVINKY pro mě:
