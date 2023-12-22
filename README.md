@@ -210,16 +210,18 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     
     
     
-    VELKÉ PÍSMENO mi určuje  část kódu-> ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())]) <- kde 'slovo.split()' rozdělí vstupní text na seznam slov;
-                            'enumerate(slovo.split())'    tato část kódu vrací dvojice (index, slovo) pro každé slovo v seznamu (index je pořadové číslo slova a slovo je samo slovo)
+    VELKÉ PÍSMENO mi určuje  část kódu
+                 ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())])
+    
+                    kde 'slovo.split()' rozdělí vstupní text na seznam slov;
                         
-                        '[slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(text.split())]:' 
-                        Toto je seznamový výraz, který prochází každé slovo ve vstupním textu. Pokud je index (pořadové číslo slova) rovno 0 (první slovo), použije se metoda capitalize() na zvětšení prvního písmena slova, jinak zůstane slovo beze změny.
+                        'enumerate(slovo.split())' tato část kódu vrací dvojice (index, slovo) pro každé slovo v seznamu (index je pořadové číslo slova a slovo je samo slovo);
+                        
+                        '[slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(text.split())]:' toto je seznamový výraz, který prochází každé slovo ve vstupním textu. Pokud je index (pořadové číslo slova) rovno 0 (první slovo), použije se metoda capitalize() na zvětšení prvního písmena slova, jinak zůstane slovo beze změny.
 
                         ' '.join(...): Nakonec se používá metoda join(), aby se spojila upravená slova zpět do řetězce, kde jsou oddělena mezerami. Výsledek je přiřazen do proměnné novy_text
 
-        Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
-
+  
 
 
 
@@ -239,4 +241,11 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                         carka_ve_vete=0
                         misto_carky=0
                         misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
-                
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
