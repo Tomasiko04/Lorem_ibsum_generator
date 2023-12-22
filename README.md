@@ -250,9 +250,9 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
     Přidá tečku za každými 5,10,14,16,20 slovy (jestliže je pocet_slov_1vete(aktualní počet slov ve větě) roven delka_vety(aktuálnímu NASTAVENÉMU počtu slov ve větě) + celkový pocet slov nesmí přesáhnout maximální počet slov) a přidá mezery na začátku nové věty
     
-    Nakonec analogicky použiju metodu '.rstrip()' a tečku na konci věty. Potom jen proměnné, které mi určují aktualní počet slov ve větě a aktuální NASTAVENÝ počet slov ve větě se nasataví na nulu a nastaví se proměnná, která mi určí, délku příští věty.
+    Nakonec analogicky použiji metodu '.rstrip()' a tečku na konci věty. Potom jen proměnné, které mi určují aktualní počet slov ve větě a aktuální NASTAVENÝ počet slov ve větě se nasataví na nulu a nastaví se proměnná, která mi určí, délku příští věty.
 
-    Musí zde platit, aby se počet slov počet slov v aktualní větě rovnal nastavenému počtu slov v aktuální větě a zároveň aby clekový počet slov npřesáhl maximum požadovaných slov.
+    Musí zde platit, aby se počet slov v aktualní větě rovnal nastavenému počtu slov v aktuální větě a zároveň aby clekový počet slov npřesáhl maximum požadovaných slov.
 
     POKUD bych odstranil ''and pocet_slov_1odstavec != delka_na_odstavci'' tak by se mi tečka za větou na konci nějakého odstavce mohla vygenerovat 2x
  
@@ -264,7 +264,42 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                     
                     delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                  
                 
-                      
+    7.Odstavce
+
+    Aby se vytvořil nový odstavec, musí zde platit, aby se počet slov v 1 odstavci rovnal nastavenému počtu slov v 1 odstavci a zároveň aby clekový počet slov npřesáhl maximum požadovaných slov.
+
+    Zase použiji metodu '.rstrip()' a tečku na konci věty(a zároveň se dá říct na konci odstavce) a následně se provedou 2 odskoky a na začátku nového odstavce 1 odsazení. Nakonec proměnné, které určují aktualní počet slov ve větě (pocet_slov_1vete) a v odstavci (pocet_slov_1odstavec) se nastaví na 0 se nastaví anlogicky se tak nastaví i proměnné (delka_vety, delka_na_odstavc), kde 1. představuje nastavenou délku vety a 2. nastavenou délku odstavce akorát úplně na konci jim bude přidělen nový parametr na příští větu a odstavec.
+
+    VÝJIMKA: Počet slov v 1 odstavci je prioritnější než počet slov v 1 větě -> tzn. Pokud bude splněna podmínka pro 1 osdstavec (aktuální počet slov v 1 odstavci = nastavenému počtu slov v 1 odstavci) tak se poslední věta ukončí i tehdy, kdy nebudede splněna podmínka pro 1 větu (aktuální počet slov v 1 větě != nastavenému počtu slov v 1 větě) 
+
+        if pocet_slov_1odstavec == delka_na_odstavci and pocet_slov <= max_pocet_slov:
+                    lorem_text = lorem_text.rstrip() 
+                    lorem_text += '.\n\n' # Odstavec
+                    lorem_text += ' ' #odskok
+                    
+                
+                    delka_vety=0                    #[5,10,14,16,20] Pouze moje poznámka pro rychlejší orientaci co daná porměnná může obsahovat.
+                    pocet_slov_1vete=0
+                    delka_na_odstavci=0             #[50,60,70] Pouze moje poznámka pro rychlejší orientaci co daná porměnná může obsahovat.
+                    pocet_slov_1odstavec=0
+
+                    delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]
+                    delka_na_odstavci=random.choices(slova_na_odstavci, weights=pravdepodobnosti_odstavci, k=1)[0] 
+
+    8.Tečka na konci věty za poslední vygenerovanou větou
+
+    Stávalo se mi, že úplně v poslední větě, se mi nechtěla vygenerovat tečka, jelikož někdy nebyly splněny podmínky ani jedna z podmínek, které jsou v bodech 6 a 7, proto jsem vytvořil tuto podmínku:
+
+        if pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
+            lorem_text = lorem_text.rstrip() + '. '
+            print(lorem_text)
+        else:
+            print(lorem_text)
+    Kdy, jak můžete spatřit, že když tyto podmínky nejsou splněny program použije metodu 'rstrip()' a přidá tečku na konci věty JINAK pokud je jedna z podmínek splněna tato tečka na konci věty se nevygenruje a vygeneruje se tečka která je dána podmínkammi z bodu 7 nebo 6. 
+
+    9.Ukládání vygenerovaného textu
+
+
                       
                       
                       
