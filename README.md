@@ -338,8 +338,19 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
              open(file_name, "w", encoding="utf-8") -> tato část otevírá soubor; 'soubor.file_name' je název souboru, který chceme otevřít; 'w' určuje, že soubor bude otevřen v režimu zápisu (write), pokud soubor již existuje, bude jeho obsah přepsán, pokud soubor neexistuje, bude vytvořen nový; 'encoding="utf-8"' určuje kódování textu; 'as file:' definuje proměnnou file, která bude odkazovat na otevřený soubor
 
     Nakonec celý soubor zapíše do souboru
-     
+
         file.write(generated_text)
+
+
+ZHODNOCENÍ:
+Na závěr bych se chtěl svámi podělit o mé pocity. Musím upřímně říct, že se jednalo, aspoň z mého pohledu, již o složitější program a další výzvu, jelikož jsem do zadání úkolu s Lorem ibsum generátorem nikdy nesetkal, a proto jsme vůbec netušil jak začít. Jelikož nestačilo mít pouze znalosti ze školy, ze kterých jsem přestože v mnoha bodech vycházel, musel jsem si své obzory v programování zase o něco málo rozšířit.   
+
+
+HLAVNÍ NOVINKY pro mě:
+->velke pismeno na začátku věty
+->rstrip()
+->ukládání vygenerovaného textu v pythonu do textového souboru
+
 
                       
 
