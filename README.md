@@ -177,7 +177,7 @@ tak se tyto 4 proměnná busou vždy zvětšovat o +1
 
                                     ' '.join(...): Nakonec se používá metoda join(), aby se spojila upravená slova zpět do řetězce, kde jsou oddělena mezerami. Výsledek je přiřazen do proměnné novy_text
 
-                    jakmile 
+                    Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
 
 
 
@@ -201,61 +201,3 @@ tak se tyto 4 proměnná busou vždy zvětšovat o +1
                                     misto_carky=0
                                     misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
                             
-                            
-                            
-                            
-                            
-                            
-                            # Přidá tečku každých 5,10,14,16,20 slov (jestliže je pocet_slov_1vete děliteny beze zbytku) a přidání mezery na začátku nové věty
-                                #POKUD bych odstranil ''and pocet_slov_1odstavec % 50 != 0'' tak by se mi tečka za větou na konci nějakého odstavce vygenerovat 2x
-
-                            
-                            
-                            
-                            
-                            if pocet_slov_1vete % delka_vety == 0 and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec % delka_na_odstavci != 0:
-                                lorem_text = lorem_text.rstrip() + '. ' #+ slovo.upper() + ' '
-                                #lorem_text += '. ' + slovo.upper() + ' '
-                                
-                                delka_vety=0                    #[5,10,14,16,20]           
-                                pocet_slov_1vete=0
-                                
-                                delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]
-                                
-                                
-
-                            # Přidá odstavec po každých 50,60,70 slovech
-                            if pocet_slov_1odstavec % delka_na_odstavci == 0 and pocet_slov <= max_pocet_slov:
-                                lorem_text = lorem_text.rstrip()
-                                lorem_text += '.\n\n' # Odstavec
-                                lorem_text += ' ' #odskok
-                                
-                            
-                                delka_vety=0                    #[5,10,14,16,20]
-                                pocet_slov_1vete=0
-                                delka_na_odstavci=0             #[50,60,70]
-                                pocet_slov_1odstavec=0
-
-                                delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]
-                                delka_na_odstavci=random.choices(slova_na_odstavci, weights=pravdepodobnosti_odstavci, k=1)[0]
-                            
-
-
-
-                                #if pocet_slov != max_pocet_slov: #velké slovo na začátku odstavce
-                                #    lorem_text +=slovo.upper()+ ' '
-
-
-
-                            #tečka na koneci generování
-                            #if lorem_text != '.':
-                            #    lorem_text = lorem_text.rstrip()
-                            #    lorem_text += '. '
-                                    
-                            if pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
-                                lorem_text = lorem_text.rstrip() + '. '
-                                print(lorem_text)
-                            else:
-                                print(lorem_text)
-
-
