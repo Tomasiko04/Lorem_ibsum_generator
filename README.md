@@ -122,6 +122,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                             print(f"Zadali jste řetězec: {max_pocet_slov}")    
 
     1.2 zadávání ANO/NE při ukládání vygenrovyného textu
+    
         Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
         "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
         tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku,
