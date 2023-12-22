@@ -76,8 +76,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
     E)
     Čárka ve větě
-
-        Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech(pravděpodobnost je čistě můj odhad)
+    Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech(pravděpodobnost je čistě můj odhad)
                 
         carka=[10,20,45]
         pravdepodobnosti_carka=[10,15,13]
