@@ -87,8 +87,10 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     
     1.1 maximální počet slov 
 
-    (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
+    Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov 
+    
     (ověřování pomocí instrukce try: except  ValueError:)
+    
     Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
 
                 řádky v kódu 47-51              
@@ -119,13 +121,13 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                         else:
                                             print(f"Zadali jste řetězec: {max_pocet_slov}")    
 
-            1.2 zadávání ANO/NE při ukládání vygenrovyného textu
-                Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
-                "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
-                tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku,
-                tedy se uživatele zeptá "Zadej maximální počet slov: "
-                (ověření pomocí podminky if)
-                VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
+    1.2 zadávání ANO/NE při ukládání vygenrovyného textu
+        Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
+        "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
+        tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku,
+        tedy se uživatele zeptá "Zadej maximální počet slov: "
+        (ověření pomocí podminky if)
+        VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
                     
                     řádky v kódu 169-171            
                                 while True:
