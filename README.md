@@ -188,6 +188,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                     carka_ve_vete+=1
 
     U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného seznamu použiji rozsah od do, kde u maximální hodnoty jsem přidal +1, aby se max hodnota také zaznamenala(pokud by zde nebyla +1 tak se max hodnota nezaznemená např. maximální hodnota bude 250, ale range bude do 249)                  
+                    
                     delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
                         
 
