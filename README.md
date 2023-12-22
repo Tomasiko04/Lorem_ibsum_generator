@@ -81,7 +81,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 2. část programu PROGRAM
 
- 1. Kontrola vstupní hodnoty:
+    1. Kontrola vstupní hodnoty:
         
         Kontrolu vstupních hodnot má zde dvakrát:
 
