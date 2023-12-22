@@ -169,10 +169,10 @@ while True:
         while True:
             rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
             if "ano" in rozhodnuti:
-                # Vygenerování textu
+                
                 generated_text = lorem_text
 
-                # Název souboru, do kterého chcete zapsat text
+                # Název souboru, do kterého chceme zapsat text
                 file_name = input("Napište název vašeho vygenerovaného textu: ")
 
                 # Otevření souboru v režimu zápisu (w - write)

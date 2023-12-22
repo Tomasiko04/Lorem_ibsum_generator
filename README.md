@@ -130,7 +130,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
     Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
     "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
-    tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku,
+    tedy k ukládání (o tom více v posledním bodu 9.) pokud zadá ne program se spustí od začátku,
     tedy se uživatele zeptá "Zadej maximální počet slov: "
     (ověření pomocí podminky if)
     VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké.
@@ -298,10 +298,48 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     Kdy, jak můžete spatřit, že když tyto podmínky nejsou splněny program použije metodu 'rstrip()' a přidá tečku na konci věty JINAK pokud je jedna z podmínek splněna tato tečka na konci věty se nevygenruje a vygeneruje se tečka která je dána podmínkammi z bodu 7 nebo 6. 
 
     9.Ukládání vygenerovaného textu
+        
+    Jako úplně poslední část progrmau zde mám ukládání vygenerovaného textu do textového souboru
+    Jako uživatel si kromě maximálního počtu slov, můžete či nemusí vygenerovaný text uložit pod svým pojmenováním do textového souboru. 
+    A jak­? Stačí nakonci, po vygenerování textu, zvolit Ano (pro vytvoření nabídky, kde zadáte název vygenerovaného textu a ten se Vám následně uloží a program se Vás znovu zeptá, kolik budete chtít maximálně vygenerovat slov) či NE a program se Vás znovu zeptám kolik chcete maximálně vygenerovat slov. 
 
+    Ze začátku si to ověří vaši vstupní hodnotu a podle toho bude program dále pokračovat (více o tomto v bodě 1.2)
 
-                      
-                      
-                      
+        while True:
+        rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
+        if "ano" in rozhodnuti:
+            
+            generated_text = lorem_text
+
+            # Název souboru, do kterého chceme zapsat text
+            file_name = input("Napište název vašeho vygenerovaného textu: ")
+
+            # Otevření souboru v režimu zápisu (w - write)
+            with open(file_name, "w", encoding="utf-8") as file:
+                # Zápis textu do souboru
+                file.write(generated_text)
+
+            print(f"Text byl úspěšně zapsán do souboru {file_name}.")
+            break
+        elif "ne" in rozhodnuti:
+            break
+        else:
+            print("Zadali jste špatnou odpověď. Muíte dát ANO/NE.")
+                                
+    Pokud se rozhodnete pro uložení, tak jako první zadáte požadovaný název pro vygenerovaný text, který se uloží do proměnné file_name  
+         
+        file_name = input("Napište název vašeho vygenerovaného textu: ") 
+
+    Následně vytvoříme otevření souboru v režimu zápisu 
+
+        with open(file_name, "w", encoding="utf-8") as file:
+
+        kde: with -> kontextový blok jehož hlavní výhodou je, že zajišťuje automatické správné uzavření souboru, i kdyby došlo k chybě během operací s ním. Je to důležité například, aby nedocházelo ke ztrátě dat. 
+             open(file_name, "w", encoding="utf-8") -> tato část otevírá soubor; 'soubor.file_name' je název souboru, který chceme otevřít; 'w' určuje, že soubor bude otevřen v režimu zápisu (write), pokud soubor již existuje, bude jeho obsah přepsán, pokud soubor neexistuje, bude vytvořen nový; 'encoding="utf-8"' určuje kódování textu; 'as file:' definuje proměnnou file, která bude odkazovat na otevřený soubor
+
+    Nakonec celý soubor zapíše do souboru
+     
+        file.write(generated_text)
+
                       
 
