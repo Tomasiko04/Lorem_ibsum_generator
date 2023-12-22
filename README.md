@@ -171,20 +171,19 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde
     nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
 
-    3. Proměnné na začátku cyklu
+    3.Proměnné na začátku cyklu
 
-                       while pocet_slov < max_pocet_slov:
-----------------------------------------------------------------------
+                    while pocet_slov < max_pocet_slov:
+
 dokud  proměnná pocet_slov (zvětšuje se o 1 po kažém vygenerovaném slovu)< max_pocet_slov (nastavení uživatele)
 tak se tyto 4 proměnná busou vždy zvětšovat o +1 
-                            pocet_slov += 1
-                            pocet_slov_1vete+=1
-                            pocet_slov_1odstavec+=1
-                            carka_ve_vete+=1
- --
- u proměnné delka_slova jsem zkusil použít random.choice s místo daným seznamem rozsah od do kde u maximální hodnoty jsem přídal +1 aby se max hodnota také zaznamenala                          
-                            
-                            delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
+                    pocet_slov += 1
+                    pocet_slov_1vete+=1
+                    pocet_slov_1odstavec+=1
+                    carka_ve_vete+=1
+
+U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného seznamu použiji rozsah od do, kde u maximální hodnoty jsem přidal +1, aby se max hodnota také zaznamenala(pokud by zde nebyla +1 tak se max hodnota nezaznemená např. maximální hodnota bude 250, ale range bude do 249)                  
+                    delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
                         
 
 
