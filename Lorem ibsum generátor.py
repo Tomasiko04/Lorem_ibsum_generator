@@ -202,4 +202,3 @@ while True:
                 
             else:
                 print(f"Zadali jste řetězec: {max_pocet_slov}")
-

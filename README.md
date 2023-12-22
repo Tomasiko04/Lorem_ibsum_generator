@@ -20,7 +20,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
     v českém jazyce vyskytují a přiřadil jsme jim dané pravděpodobosti 
         
         UKÁZKA:     
-        (Řádky v kódu: 8, 10)       
+        (Řádky v kódu: 8, 10) 
+
         SLABIKY
         ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov',
             'ro', 'en', 'na', 'je', 'pr', 'te', 'le', 'ko', 'ne', 'od', 'ra', 
@@ -36,14 +37,17 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
     B)
     Počet slabik VE SLOVĚ 
                 
-    Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky, kdy nejvíce se vyskytují slova se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
-            
+    Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky, kdy nejvíce se vyskytují slova se 3 slabikami, dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
+        
+        UKÁZKA:  
         (řádky v kódu: 15,16)
+
         # Minimální a maximální délka slova
         min_delka_slova = 1
         max_delka_slova = 4
 
         (pravděpodobnosti řádky v kódu: 19–25)
+
         # Pravděpodobnosti pro délky slov od 1 do 10
         pravdepodobnosti_delky_slov = [
             5,  # délka slova 1
@@ -55,35 +59,47 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
 
     C)
     Počet slov VE VETĚ
-                Zde jsem si zvolil, že v každé větě se budu vyskytovat 5, 10, 14, 16, 20 slov (řádky v kódu: 31,32), kdy nejvíce se vyskytují věty 
-                s 16 slovy, dále pak se 14 slovy, poté 20 slovy, následně s 10 slovy a nejméně s 5 slovy.
+
+    Zde jsem si zvolil, že v každé větě se budu vyskytovat 5, 10, 14, 16, 20 slov, kdy se nejvíce vyskytují věty 
+    s 16 slovy, dále pak se 14 slovy, poté 20 slovy, následně s 10 slovy a nejméně s 5 slovy.
+
+        UKÁZKA:  
+        (řádky v kódu: 31,32)
 
         slova_ve_vete=[5,10,14,16,20]
         pravdepodobnosti_veta=[2,5,9,12,8]
 
     D)
     Počet slov NA ODSTAVCI
-    Zde jsem si zvolil, že v každé odstavci se budu vyskytovat 50, 60, 70 slov (řádky v kódu: 37,38), kdy nejvíce se vyskytují odstavce 
+    
+    Zde jsem si zvolil, že v každé odstavci se budu vyskytovat 50, 60, 70 slov, kdy se nejvíce vyskytují odstavce 
     s 60 slovy, dále pak s 50 slovy a nejméně se 70 slovy.
+
+        UKÁZKA:  
+        (řádky v kódu: 37,38)
 
         slova_na_odstavci=[50,60,70]
         pravdepodobnosti_odstavci=[9,12,8]
 
-        VYCHYTÁVKA: Každý začátek odstavce je odsazen, akorát při spuštění v PYTHONU to nejde vždy vidět, proto doporučuji si daný text otevřít v textovém souboru, do kterého Vám tento text PYTHON uloží, pokud budete na konci chtít.  
+    RADA: Každý začátek odstavce je odsazen, akorát při spuštění v PYTHONU to nejde vždy vidět, proto doporučuji si daný text otevřít v textovém souboru, do kterého Vám tento text PYTHON uloží, pokud budete na konci chtít.  
 
-        POZOR: Jelikož každý odstavec končí po 50, 60 nebo po 70 slovech většinou se stane, že poslední věta neobsahuje předem daný počet slov VE VĚTĚ (počet slov ve větě je zmíněn v části 1 v bodě c))
+    POZOR: Jelikož každý odstavec končí po 50, 60 nebo po 70 slovech většinou se stane, že poslední věta neobsahuje předem daný počet slov VE VĚTĚ (počet slov ve větě je zmíněn v části 1 v bodě c).
 
-        VÝVOJ: Ze začátku jsem si zvolil, že se mi odstavce budou dělit po každých 50 slovech -> to se mi zdálo jednoduché tak jsem určil že v každém odstavci bude 50, 60 nebo 70 slov
+    VÝVOJ: Ze začátku jsem si zvolil, že se mi odstavce budou dělit po každých 50 slovech -> to se mi zdálo jednoduché tak jsem určil že v každém odstavci bude 50, 60 nebo 70 slov.
 
     E)
     Čárka ve větě
-        Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech(pravděpodobnost je čistě můj odhad)
-                
+
+    Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. Nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech (pravděpodobnost je čistě můj odhad).
+
+        UKÁZKA:  
+        (řádky v kódu: 42,43) 
+
         carka=[10,20,45]
         pravdepodobnosti_carka=[10,15,13]
         
-        VYCHYTÁVKA:
-        V části PROGRAM jsem část s čárkami v souvětí ošetřil tak, že se čárka nevyskytne před tečkou na konci věty či před 1. slovem ve větě.
+    VYCHYTÁVKA:
+    V části PROGRAM jsem část s čárkami v souvětí ošetřil tak, že se čárka nevyskytne před tečkou na konci věty či před 1. slovem ve větě (více v části 5.Malé písmeno a čárka ve větě).
 
 2. část programu PROGRAM
 
@@ -93,11 +109,11 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
     
     1.1 maximální počet slov 
 
-    Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov 
+    Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo, bude se ho opakovaně ptát, aby zadal maximální počet slov. 
     
     (ověřování pomocí instrukce try: except  ValueError:)
     
-    Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
+    Program vyzkouší, jestli vstupní hodnota je int, pokud ne, zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme, že se jedná o str (řetězec) -> následně program zjistí, kolik je slov v řetězci, pokud se v řetězci nic nenachází předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
 
         řádky v kódu 47-51              
                         
@@ -129,14 +145,17 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
 
     1.2 zadávání ANO/NE při ukládání vygenrovyného textu
 
-    Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na
+    Pokud zde uživatel zadá něco jiného než ANO/NE, program se ho bude pořád ptát na
     "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku
-    tedy k ukládání (o tom více v posledním bodu 9.) pokud zadá ne program se spustí od začátku,
-    tedy se uživatele zeptá "Zadej maximální počet slov: "
+    tedy k ukládání (o tom více v posledním bodu 9.) pokud zadá NE, program se spustí od začátku,
+    zeptá tedy se uživatele  "Zadej maximální počet slov: "
+    
     (ověření pomocí podminky if)
+    
     VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké.
                     
-        řádky v kódu 169-171            
+        řádky v kódu 169-171
+
                     while True:
                         rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
                         if "ano" in rozhodnuti:
@@ -154,16 +173,16 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
 
         lorem_text=' '       =>proměnná do které se ukládají slova ze začátku prázdná
 
-    Z názvu proměnných snado poznáte jaké hodnoty se zde budou ukádat ze začátku jsou všechny
-    nastaveny na 0 JSOU důležité protože díky nim poznáme kdy se má ukončit generování textu
-    či čárky ve větě nebo konec slova či věty
+    Z názvu proměnných snado poznáte, jaké hodnoty se zde budou ukádat. Ze začátku jsou všechny
+    nastaveny na 0. JSOU důležité, protože díky nim poznáme, kdy se má ukončit generování textu
+    či čárky ve větě nebo konec slova či věty.
 
         pocet_slov = 0             
         pocet_slov_1vete=0                       
         pocet_slov_1odstavec=0      
         carka_ve_vete=0             
 
-    Proměnné uvedené níže naopak neříkají kdy má končit generování slovo, věty, odstavce nebo
+    Proměnné uvedené níže naopak neříkají kdy má končit generování slova, věty, odstavce nebo
     vyskytnout se čárka v souvětí
     ALE nastavují délky vět,odstavců či výskyt čárek v souvětí
 
