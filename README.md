@@ -4,7 +4,7 @@ Lorem ibsum generátor
         Lorem ipsumje označen proužívaný v grafickém designu a navrhování jako demonstrativní 
         výplňový text při vytváření pracovních ukázek grafických návrhů (např. fontů nebo 
         rozvržení časopisů či HTML stránek). 
-    
+---------------------------   
     Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
         
         1. část programu (SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY)
@@ -18,7 +18,7 @@ Lorem ibsum generátor
                 v českém jazyce vyskytují a přiřadil jsme jim dané pravděpodobosti 
                 UKÁZKA: 
                 (V kódu řádky: 8, 10)
-                
+-------------------------                
                 SLABIKY
                 ['a','á','e','é','i','í','y','ý','o','ó','u','st', 'ní', 'po', 'ov',
                  'ro', 'en', 'na', 'je', 'pr', 'te', 'le', 'ko', 'ne', 'od', 'ra', 
