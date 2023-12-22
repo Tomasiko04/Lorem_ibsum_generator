@@ -9,7 +9,6 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
         1. část programu (SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY)
             Tato část, jak již název napovídá, obsahuje veškerá se seznamy, 
             pravděpodobnosti a počty slabik ve slově, slov ve větách a vět v odstavci:
-                
                 A)SLABIK – zde jsme čerpal ze stránky 
                 -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
                 kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
@@ -30,7 +29,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 1, 39, 11, 46, 8, 55, 1, 31, 1, 6, 
                 43, 1, 1, 17, 9, 21, 10]
 
-                B)Počet slabik VE SLOVĚ 
+B)Počet slabik VE SLOVĚ 
                 Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky 
                 (řádky v kódu: 15,16), kdy nejvíce se vyskytují slova 
                 se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
