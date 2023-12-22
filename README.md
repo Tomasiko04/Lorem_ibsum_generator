@@ -147,7 +147,7 @@ Lorem ibsum generátor
 
                         např. za proměnnou misto_carky mi dosadí prvek ze seznamu, kde každý prvek má určitou váhu výsledku, kterou si nastavíme u proměnné weights= ,jelikož k=1 tj. počet vybraných prvků ze seznamu, musíme na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
 
-                3. 
+                3. Proměnné na začátku cyklu
 
                        while pocet_slov < max_pocet_slov:
 ----------------------------------------------------------------------
