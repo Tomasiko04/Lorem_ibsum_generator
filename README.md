@@ -101,7 +101,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                     .
                                     .
                                     .
-řádky v kódu 190-204            except ValueError:
+                řádky v kódu 190-204.
+                                except ValueError:
                                     # Pokud převod na int selže, zkusíme převést na desetinné číslo (float)
                                     try:
                                         max_pocet_slov = float(zadane_max_pocet_slov)
