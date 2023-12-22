@@ -343,12 +343,17 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
 
 ZHODNOCENÍ:
+
 Na závěr bych se chtěl svámi podělit o mé pocity. Musím upřímně říct, že se jednalo, aspoň z mého pohledu, již o složitější program a další výzvu, jelikož jsem do zadání úkolu s Lorem ibsum generátorem nikdy nesetkal, a proto jsme vůbec netušil jak začít. Jelikož nestačilo mít pouze znalosti ze školy, ze kterých jsem přestože v mnoha bodech vycházel, musel jsem si své obzory v programování zase o něco málo rozšířit.   
 
 
+
 HLAVNÍ NOVINKY pro mě:
+
 ->velke pismeno na začátku věty
+
 ->rstrip()
+
 ->ukládání vygenerovaného textu v pythonu do textového souboru
 
 
