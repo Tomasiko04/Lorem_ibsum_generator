@@ -247,9 +247,13 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                         misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
 
     6.Počet slov v 1 větě
+
+    Přidá tečku za každými 5,10,14,16,20 slovy (jestliže je pocet_slov_1vete(aktualní počet slov ve větě) roven delka_vety(aktuálnímu NASTAVENÉMU počtu slov ve větě) + celkový pocet slov nesmí přesáhnout maximální počet slov) a přidá mezery na začátku nové věty
     
-    Přidá tečku za každými 5,10,14,16,20 slovy (jestliže je pocet_slov_1vete(aktualní počet slov ve větě) roven delka_vety(aktuálnímu nastavenému počtu slov ve větě) + celkovy pocet slov nesmí přesáhnout maximální počet slov) a přidá mezery na začátku nové věty
-    
+    Nakonec analogicky použiju metodu '.rstrip()' a tečku na konci věty. Potom jen proměnné, které mi určují aktualní počet slov ve větě a aktuální NASTAVENÝ počet slov ve větě se nasataví na nulu a nastaví se proměnná, která mi určí, délku příští věty.
+
+    Musí zde platit, aby se počet slov počet slov v aktualní větě rovnal nastavenému počtu slov v aktuální větě a zároveň aby clekový počet slov npřesáhl maximum požadovaných slov.
+
     POKUD bych odstranil ''and pocet_slov_1odstavec != delka_na_odstavci'' tak by se mi tečka za větou na konci nějakého odstavce mohla vygenerovat 2x
 
 
