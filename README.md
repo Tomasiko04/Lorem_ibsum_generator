@@ -148,26 +148,26 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                     lorem_text=' '              =>proměnná do které se ukládají slova ze začátku prázdná
 
-                Z názvu proměnných snado poznáte jaké hodnoty se zde budou ukádat ze začátku jsou všechny
-                nastaveny na 0 JSOU důležité protože díky nim poznáme kdy se má ukončit generování textu
-                či čárky ve větě nebo konec slova či věty
+    Z názvu proměnných snado poznáte jaké hodnoty se zde budou ukádat ze začátku jsou všechny
+    nastaveny na 0 JSOU důležité protože díky nim poznáme kdy se má ukončit generování textu
+    či čárky ve větě nebo konec slova či věty
 
                     pocet_slov = 0             
                     pocet_slov_1vete=0                       
                     pocet_slov_1odstavec=0      
                     carka_ve_vete=0             
 
-                Proměnné uvedené níže naopak neříkají kdy má končit generování slovo či věty,
-                ALE nastavují délky vět,odstavců či výskyt čárek v souvětí
+    Proměnné uvedené níže naopak neříkají kdy má končit generování slovo či věty,
+    ALE nastavují délky vět,odstavců či výskyt čárek v souvětí
 
                     delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                 
                     delka_na_odstavci=random.choices(slova_na_odstavci, weights=pravdepodobnosti_odstavci, k=1)[0]  
                     misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]   
 
-                např. za proměnnou misto_carky mi dosadí prvek ze seznamu, kde každý prvek má určitou váhu výsledku,
-                kterou si nastavíme u proměnné weights= ,jelikož k=1 tj. počet vybraných prvků ze seznamu, musíme
-                na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde
-                nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
+    např. za proměnnou misto_carky mi dosadí prvek ze seznamu, kde každý prvek má určitou váhu výsledku,
+    kterou si nastavíme u proměnné weights= ,jelikož k=1 tj. počet vybraných prvků ze seznamu, musíme
+    na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde
+    nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
 
     3. Proměnné na začátku cyklu
 
