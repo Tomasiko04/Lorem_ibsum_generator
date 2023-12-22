@@ -175,14 +175,14 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                     while pocet_slov < max_pocet_slov:
 
-dokud  proměnná pocet_slov (zvětšuje se o 1 po kažém vygenerovaném slovu)< max_pocet_slov (nastavení uživatele)
-tak se tyto 4 proměnná busou vždy zvětšovat o +1 
+    dokud  proměnná pocet_slov (zvětšuje se o 1 po kažém vygenerovaném slovu)< max_pocet_slov (nastavení uživatele)
+    tak se tyto 4 proměnná busou vždy zvětšovat o +1 
                     pocet_slov += 1
                     pocet_slov_1vete+=1
                     pocet_slov_1odstavec+=1
                     carka_ve_vete+=1
 
-U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného seznamu použiji rozsah od do, kde u maximální hodnoty jsem přidal +1, aby se max hodnota také zaznamenala(pokud by zde nebyla +1 tak se max hodnota nezaznemená např. maximální hodnota bude 250, ale range bude do 249)                  
+    U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného seznamu použiji rozsah od do, kde u maximální hodnoty jsem přidal +1, aby se max hodnota také zaznamenala(pokud by zde nebyla +1 tak se max hodnota nezaznemená např. maximální hodnota bude 250, ale range bude do 249)                  
                     delka_slova = random.choices(range(min_delka_slova, max_delka_slova + 1), weights=pravdepodobnosti_delky_slov, k=1)[0]
                         
 
@@ -190,37 +190,46 @@ U proměnné delka_slova jsem zkusil použít random.choice, kde místo daného 
 --------------------------------------------------------------------
 
 
-                4. Tato část programu zjišťuje jestli se jedná 1. slovo ve větě pokud ANO přiřadí proměnné slovo slabiky s danou váhou jejich výskytu a také využije proměnné delka_slova (nastavená výše) abychom měli daný počet slabik ve slově zde jsem již nepoužil [0] jelikož nevybírám jednu věc o nějaké váze výskytu ze seznamu
+    4. Velké písmeno na začátku věty 
 
-                VELKÉ PÍSMENO mi určuje  část kódu-> ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())]) <- kde 'slovo.split()' rozdělí vstupní text na seznam slov;
-                                     'enumerate(slovo.split())'    tato část kódu vrací dvojice (index, slovo) pro každé slovo v seznamu (index je pořadové číslo slova a slovo je samo slovo)
-                                    
-                                    '[slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(text.split())]:' 
-                                    Toto je seznamový výraz, který prochází každé slovo ve vstupním textu. Pokud je index (pořadové číslo slova) rovno 0 (první slovo), použije se metoda capitalize() na zvětšení prvního písmena slova, jinak zůstane slovo beze změny.
+    Tato část programu zjišťuje jestli se jedná o první slovo ve větě, a pokud ANO přiřadí proměnné 'slovo' slabiky s danou váhou jejich výskytu a také využije proměnné delka_slova (nastavená výše), abychom měli daný počet slabik ve slově, zde jsem již nepoužil [0] jelikož nevybírám jednu věc o nějaké váze výskytu ze seznamu, ale více věcí (slabik) a následně využije instrukce která je popsána níže s názvem VELK0 PÍSMENO a tím vytvoří velké písmeno na začátku věty, nakonec jen za nově vytvořené slovo z několika slabik přïdá mezeru
 
-                                    ' '.join(...): Nakonec se používá metoda join(), aby se spojila upravená slova zpět do řetězce, kde jsou oddělena mezerami. Výsledek je přiřazen do proměnné novy_text
-
-                    Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
-
-
-
-
-                            if pocet_slov_1vete==1:  #velké písmeno na začátku věty     
+                    if pocet_slov_1vete==1:  #velké písmeno na začátku věty     
                                 slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
-                                
-                                
                                 nove_slovo= ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())])
                                 lorem_text += nove_slovo + ' '
 
-                            else:
-                                slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
-                                lorem_text += slovo + ' '
-                                
-                                if carka_ve_vete % misto_carky == 0 and pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
-                                    
-                                    
-                                    lorem_text =lorem_text.rstrip() + ', '
-                                    carka_ve_vete=0
-                                    misto_carky=0
-                                    misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
                             
+    
+    
+    
+    VELKÉ PÍSMENO mi určuje  část kódu-> ' '.join([slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(slovo.split())]) <- kde 'slovo.split()' rozdělí vstupní text na seznam slov;
+                            'enumerate(slovo.split())'    tato část kódu vrací dvojice (index, slovo) pro každé slovo v seznamu (index je pořadové číslo slova a slovo je samo slovo)
+                        
+                        '[slovo.capitalize() if index == 0 else slovo for index, slovo in enumerate(text.split())]:' 
+                        Toto je seznamový výraz, který prochází každé slovo ve vstupním textu. Pokud je index (pořadové číslo slova) rovno 0 (první slovo), použije se metoda capitalize() na zvětšení prvního písmena slova, jinak zůstane slovo beze změny.
+
+                        ' '.join(...): Nakonec se používá metoda join(), aby se spojila upravená slova zpět do řetězce, kde jsou oddělena mezerami. Výsledek je přiřazen do proměnné novy_text
+
+        Čárka ve větě nastane v případech pokud aktualni počet slov ve větě nebude dělitelný beze zbytku počtem  slov pro danou větu nebo pokud aktualní pocetem slov na odstavec nebude dělitelný nastaveným poctem slov na ostavec a zároveň kdy aktualni pocet čárek je dělitelný beze zbytku nastaveným místem kde má být des. čárka. následne se promenne nastaví nny 0 misto carky se nastaví na novou hodnotu
+
+
+
+
+    5. Malé písmeno ve větě
+
+    Pokud se naopak nejedná o první slovo ve větě, program udělá uplně to samé jako by se jednalo o velké písmeno akorát část výše uvedeného kódu VELKÁ PÍSMENA
+    Nakonec použiji metodu 'rstrip()', která odstraní všechny koncové znaky (znaky na konci řetězce), mezera je výchozí koncový znak k odstranění a přidá tečku na konci věty (použil jsme to z toho důvodu, aby mezi posledním slovem a tečkou na konci věty nebyla mezera). Potom jen proměnné, které mi určují čárku ve větě nasataví na nulu a nastaví proměnnou, která mi určí, kde se bude vyskytovat přístí čárka v souvětí.
+
+                else:
+                    slovo = ''.join(random.choices(slabiky, weights=pravdepodobnosti_pismen, k=delka_slova))
+                    lorem_text += slovo + ' '
+                    
+                    if carka_ve_vete % misto_carky == 0 and pocet_slov_1vete % delka_vety != 0 and pocet_slov_1odstavec % delka_na_odstavci != 0:
+                        
+                        
+                        lorem_text =lorem_text.rstrip() + ', '
+                        carka_ve_vete=0
+                        misto_carky=0
+                        misto_carky=random.choices(carka,weights=pravdepodobnosti_carka, k=1)[0]
+                
