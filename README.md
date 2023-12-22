@@ -7,10 +7,11 @@ Lorem ibsum generátor
  
 Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
         
-        1. část programu (SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY)
+1. část programu (SEZNAMY (písmena, slabiky)+ JEJICH PRVĚPODOBNOSTI + POČTY)
             Tato část, jak již název napovídá, obsahuje veškerá se seznamy, 
             pravděpodobnosti a počty slabik ve slově, slov ve větách a vět v odstavci:
-                A)SLABIK – zde jsme čerpal ze stránky 
+
+A)SLABIK – zde jsme čerpal ze stránky 
                 -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
                 kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
                 vybral jsem si odsud tedy pár českých slabik, které se
