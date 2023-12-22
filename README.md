@@ -181,6 +181,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
     dokud  proměnná pocet_slov (zvětšuje se o 1 po kažém vygenerovaném slovu)< max_pocet_slov (nastavení uživatele)
     tak se tyto 4 proměnná busou vždy zvětšovat o +1 
+                    
                     pocet_slov += 1
                     pocet_slov_1vete+=1
                     pocet_slov_1odstavec+=1
