@@ -11,7 +11,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
             Tato část, jak již název napovídá, obsahuje veškerá se seznamy, 
             pravděpodobnosti a počty slabik ve slově, slov ve větách a vět v odstavci:
 
-    A)SLABIK – zde jsme čerpal ze stránky 
+    A)
+    SLABIK – zde jsme čerpal ze stránky 
                 -> https://nlp.fi.muni.cz/cs/FrekvenceSlovLemmat <- 
                 kde se nachází frekvence písmen, bigramů, trigramů, délka slov;
                 vybral jsem si odsud tedy pár českých slabik, které se
@@ -31,7 +32,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 1, 39, 11, 46, 8, 55, 1, 31, 1, 6, 
                 43, 1, 1, 17, 9, 21, 10]
 
-    B)Počet slabik VE SLOVĚ 
+    B)
+    Počet slabik VE SLOVĚ 
                 Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky 
                 (řádky v kódu: 15,16), kdy nejvíce se vyskytují slova 
                 se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
@@ -50,7 +52,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                     ]
 
-    C)Počet slov VE VETĚ
+    C)
+    Počet slov VE VETĚ
                 Zde jsem si zvolil, že v každé větě se budu vyskytovat 5, 10, 14, 16, 20 slov (řádky v kódu: 31,32), kdy nejvíce se vyskytují věty 
                 s 16 slovy, dále pak se 14 slovy, poté 20 slovy, následně s 10 slovy a nejméně s 5 slovy.
 
@@ -70,7 +73,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                 VÝVOJ: Ze začátku jsem si zvolil, že se mi odstavce budou dělit po každých 50 slovech -> to se mi zdálo jednoduché tak jsem určil že v každém odstavci bude 50, 60 nebo 70 slov
 
-    E)Čárka ve větě
+    E)
+    Čárka ve větě
                 Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech(pravděpodobnost je čistě můj odhad)
                 
                 carka=[10,20,45]
