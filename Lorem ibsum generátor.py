@@ -119,7 +119,7 @@ while True:
             # Přidá tečku každých 5,10,14,16,20 slov (jestliže je pocet_slov_1vete děliteny beze zbytku) a přidání mezery na začátku nové věty
                 #POKUD bych odstranil ''and pocet_slov_1odstavec % 50 != 0'' tak by se mi tečka za větou na konci nějakého odstavce vygenerovat 2x
 
-            if pocet_slov_1vete % delka_vety == 0 and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec % delka_na_odstavci != 0:
+            if pocet_slov_1vete == delka_vety and pocet_slov <= max_pocet_slov and pocet_slov_1odstavec != delka_na_odstavci:
                 lorem_text = lorem_text.rstrip() + '. ' #+ slovo.upper() + ' '
                 #lorem_text += '. ' + slovo.upper() + ' '
                 
@@ -131,7 +131,7 @@ while True:
                 
 
             # Přidá odstavec po každých 50,60,70 slovech
-            if pocet_slov_1odstavec % delka_na_odstavci == 0 and pocet_slov <= max_pocet_slov:
+            if pocet_slov_1odstavec == delka_na_odstavci and pocet_slov <= max_pocet_slov:
                 lorem_text = lorem_text.rstrip()
                 lorem_text += '.\n\n' # Odstavec
                 lorem_text += ' ' #odskok
