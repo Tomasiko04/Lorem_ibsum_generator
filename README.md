@@ -157,7 +157,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                     pocet_slov_1odstavec=0      
                     carka_ve_vete=0             
 
-    Proměnné uvedené níže naopak neříkají kdy má končit generování slovo či věty,
+    Proměnné uvedené níže naopak neříkají kdy má končit generování slovo, věty, odstavce nebo
+    vyskytnout se čárka v souvětí
     ALE nastavují délky vět,odstavců či výskyt čárek v souvětí
 
                     delka_vety=random.choices(slova_ve_vete, weights=pravdepodobnosti_veta, k=1)[0]                 
