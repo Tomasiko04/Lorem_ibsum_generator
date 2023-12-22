@@ -130,23 +130,23 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
     (ověření pomocí podminky if)
     VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké.
                     
-                    řádky v kódu 169-171            
-                                while True:
-                                    rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
-                                    if "ano" in rozhodnuti:
-                                        .
-                                        .
-                                        .
-                                        .                                                               
-                    řádky v kódu 185-188.               
-                                    elif "ne" in rozhodnuti:
-                                        break
-                                    else:
-                                        print("Zadali jste špatnou odpověď. Muíte dát ANO/NE.")
+                řádky v kódu 169-171            
+                            while True:
+                                rozhodnuti=input("Chcete váš soubor uložit(ANO/NE)?: ").lower()
+                                if "ano" in rozhodnuti:
+                                    .
+                                    .
+                                    .
+                                    .                                                               
+                řádky v kódu 185-188.               
+                                elif "ne" in rozhodnuti:
+                                    break
+                                else:
+                                    print("Zadali jste špatnou odpověď. Muíte dát ANO/NE.")
 
     2.Nastavování proměnných(po zadání vstupní hodnoty):
 
-                    lorem_text=' '              =>proměnná do které se ukládají slova ze začátku prázdná
+                lorem_text=' '       =>proměnná do které se ukládají slova ze začátku prázdná
 
     Z názvu proměnných snado poznáte jaké hodnoty se zde budou ukádat ze začátku jsou všechny
     nastaveny na 0 JSOU důležité protože díky nim poznáme kdy se má ukončit generování textu
