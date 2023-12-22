@@ -35,7 +35,8 @@ Popis mého pokusu o vytvoření vlastního Lorem ipsum generátoru v krocích:
 
     B)
     Počet slabik VE SLOVĚ 
-                Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky, kdy nejvíce se vyskytují slova se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
+                
+    Zde jsem si zvolil, že v každém slově se bude vyskytovat 1 nebo až 4 slabiky, kdy nejvíce se vyskytují slova se 3 slabikami dále se 2 slebikami se 4 slabikami a nejméně s 1 slabikou.
             
         (řádky v kódu: 15,16)
         # Minimální a maximální délka slova
