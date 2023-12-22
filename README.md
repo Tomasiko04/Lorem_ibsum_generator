@@ -87,7 +87,9 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
                 (ověřování pomocí instrukce try: except  ValueError:)
                 Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
-řádky v kódu 47-51              
+
+                řádky v kódu 47-51              
+                                
                                 while True:
                                 # Maximální počet slov, který si může uživatel zvolit
                                 zadane_max_pocet_slov = input("Zadej maximální počet slov: ")
