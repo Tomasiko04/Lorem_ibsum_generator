@@ -50,7 +50,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                     ]
 
-                C)Počet slov VE VETĚ
+    C)Počet slov VE VETĚ
                 Zde jsem si zvolil, že v každé větě se budu vyskytovat 5, 10, 14, 16, 20 slov (řádky v kódu: 31,32), kdy nejvíce se vyskytují věty 
                 s 16 slovy, dále pak se 14 slovy, poté 20 slovy, následně s 10 slovy a nejméně s 5 slovy.
 
@@ -70,7 +70,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                 VÝVOJ: Ze začátku jsem si zvolil, že se mi odstavce budou dělit po každých 50 slovech -> to se mi zdálo jednoduché tak jsem určil že v každém odstavci bude 50, 60 nebo 70 slov
 
-                E)Čárka ve větě
+    E)Čárka ve větě
                 Nakonec mě ještě napadlo, že by generátor mohl generovat i čárky v souvětí. Generátor postujpuje tak, že za každými 20, 45 nebo 10 solovy napíše čárku. nejvíce se vyskytne čárka po 20 slovech, dále pak po 45 slovecha a nejméně po 10 slovech(pravděpodobnost je čistě můj odhad)
                 
                 carka=[10,20,45]
@@ -79,13 +79,13 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                 VYCHYTÁVKA:
                 V části PROGRAM jsem část s čárkami v souvětí ošetřil tak, že se čárka nevyskytne před tečkou na konci věty či před 1. slovem ve větě.
 
-     2. část programu PROGRAM
+2. část programu PROGRAM
 
-                1. Kontrola vstupní hodnoty:
-                    Kontrolu vstupních hodnot má zde dvakrát:
-                        1.1. maximální počet slov 
-                        (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
-                            (ověřování pomocí instrukce try: except  ValueError:)
+    1. Kontrola vstupní hodnoty:
+        Kontrolu vstupních hodnot má zde dvakrát:
+            1.1. maximální počet slov 
+                (Pokud uživatel zadá cokoli jiného než int nebo-li celé číslo bude se ho opakovaně ptát aby zadal maximální počet slov) 
+                (ověřování pomocí instrukce try: except  ValueError:)
 
                                 Program vyzkouší, jestli vstupní hodnota je int, pokud ne zkusí jetli se nejedná o float (desetinné číslo), pokud se nejedná o float předpokládáme že se jedná o str (řetězec) -> následně program zistí kolik je slov v řetězci, pokud se v řetězci nenachází žádné číslo předpokládáme, že uživatel nezadal žádnou vstupní hodnotu.
 řádky v kódu 47-51              while True:
@@ -113,9 +113,9 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                         else:
                                             print(f"Zadali jste řetězec: {max_pocet_slov}")    
 
-                        1.2. zadávání ANO/NE při ukládání vygenrovyného textu
-                            Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku, tedy se uživatele zeptá "Zadej maximální počet slov: "
-                            (ověření pomocí podminky if)
+            1.2. zadávání ANO/NE při ukládání vygenrovyného textu
+                Pokud zde uživatel zadá něco jiného než ANO/NE program se ho bude pořád ptát na "Chcete váš soubor uložit(ANO/NE)?: ", pokud zadá ANO přejde se k dalšímu kroku tedy k ukládání (o tom více !!!!!!!!!!) pokud zadá ne program se spustí od začátku, tedy se uživatele zeptá "Zadej maximální počet slov: "
+                (ověření pomocí podminky if)
 
                             VYCHYTÁVKA: požil jsem funkci .lower() tzn. že všechny znaky na daném inputu převede na malá písmena, i když s jsou velké
 řádky v kódu 169-171            while True:
@@ -130,7 +130,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
                                     else:
                                         print("Zadali jste špatnou odpověď. Muíte dát ANO/NE.")
 
-                2. Nastavování proměnných(po zadání vstupní hodnoty):
+    2. Nastavování proměnných(po zadání vstupní hodnoty):
 
                     lorem_text=' ' =>proměnná do které se ukládají slova ze začátku prázdná
 
@@ -147,7 +147,7 @@ Popis mého pokusu o vytvoření vlastního Lorem ibsum generátoru v krocích:
 
                         např. za proměnnou misto_carky mi dosadí prvek ze seznamu, kde každý prvek má určitou váhu výsledku, kterou si nastavíme u proměnné weights= ,jelikož k=1 tj. počet vybraných prvků ze seznamu, musíme na konec přidat [0], aby byl získán opravdu jediný prvek z tohoto seznamu (random.choice jsem zde nezvolil, jelikož si zde nemohu přiřadit váhy výskytu jednotlivých prvků ze seznamu)
 
-                3. Proměnné na začátku cyklu
+    3. Proměnné na začátku cyklu
 
                        while pocet_slov < max_pocet_slov:
 ----------------------------------------------------------------------
